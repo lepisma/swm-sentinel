@@ -1,0 +1,3 @@
+#+TITLE: swm-sentinel
+
+Watch and log actions in stumpwm.
