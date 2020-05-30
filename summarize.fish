@@ -25,5 +25,5 @@ function summary_line_time -a summary_line
 end
 
 for line in (summarize $argv[1] | grep -v "^\$" | sort | uniq -c | sort -nr)
-    echo (string trim $line | cut -d " " -f2-) " [" (summary_line_time $line) "]"
+    echo " ["(summary_line_time $line)"] "(string trim $line | cut -d " " -f2-)
 end

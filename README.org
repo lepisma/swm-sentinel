@@ -1,3 +1,37 @@
 #+TITLE: swm-sentinel
 
 Watch and log actions in stumpwm.
+
+Temporarily, I am getting around using stump for windows by running a few shell
+scripts.
+
+#+begin_src shell :exports both
+  # Start logging window activity every 10 seconds
+  ./sentinel.fish windows.log
+#+end_src
+
+#+begin_src shell :exports both :results output
+  # Generate summary
+  ./summarize.fish windows.log
+#+end_src
+
+#+RESULTS:
+#+begin_example
+ [5h 35m 30s] Firefox Nightly
+ [2h 43m 40s] vernacular-slack
+ [1h 52m 10s] Emacs
+ [1h 20m 50s] Chromium
+ [39m 50s] Konsole
+ [9m 40s] VLC media player
+ [1m 50s] MEGAsync
+ [30s] Okular
+ [30s] Figure 1
+ [20s] reichlab-slack
+ [20s] discord
+ [10s] Open Directory
+ [10s] Mount stash
+ [10s] emacs@euclid-red
+ [10s] [55173]@euclid-red
+ [10s] [52119]@euclid-red
+ [10s] [141756]@euclid-red
+#+end_example
