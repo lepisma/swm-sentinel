@@ -3,6 +3,6 @@
 # Temporary script for simulating window watching
 
 while true
-    echo (date -Iseconds)", "(xdotool getactivewindow getwindowname) >> windows.log
+    echo (date -Iseconds)", "(xdotool getactivewindow getwindowname) >> $argv[1]
     sleep 10
 end
